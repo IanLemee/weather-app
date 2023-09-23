@@ -34,11 +34,12 @@ body {
     border: 0;
     outline: 0;
     background-color: #ebfffc;
-    color: #555;
+    color: #000;
     padding: 10px 25px;
     height: 60px;
     border-radius: 15px;
     flex: 1;
+    margin-top: 5px;
     margin-right: 16px;
     font-size: 18px;
 }
@@ -109,6 +110,10 @@ p {
     background: linear-gradient(110deg, #c37f00, #FFFF99, #bd3722);
 }
 
+.normal {
+    background: linear-gradient(110deg, #FFA500, #FFFF99, #87CEEB);
+}
+
 .error {
     text-align: center;
     font-size: 18px;
@@ -121,10 +126,30 @@ p {
     display: none;
 }
 
-@media screen and (max-width: 320px){
+.enter_city span{
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px;
+    cursor: text;
+    color: #666666;
+    transition: all 0.5s ease;
+}
+
+.enter_city .span-active {
+    font-size: 0.6em;
+    margin: 8px 10px;
+    margin-bottom: 15px;
+}
+
+
+
+@media screen and (max-width: 426px){
     .card {
         padding: 15px 20px;
         margin: 0;
+        height: 100vh;
     }
     .search input{
         width: 190px;
@@ -138,3 +163,13 @@ p {
         margin: 10px;
     }
 }
+
+/* @media screen and (max-width: 425px){
+    .card {
+        margin: 0;
+    }
+
+    .search input{
+        width: 190px;
+    }
+} */

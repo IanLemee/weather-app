@@ -37,6 +37,9 @@ async function checkWeather(city) {
     } else if (data.main.temp <= "20") {
         document.querySelector(".card").classList.remove("quente")
         document.querySelector(".card").classList.add("frio")
+    } else if (data.main.temp >= "25" && data.main.temp <= "21") {
+        document.querySelector(".card").classList.remove("frio")
+        document.querySelector(".card").classList.add("normal")
     }
 
     document.querySelector(".error").style.display = "none"
@@ -45,6 +48,15 @@ async function checkWeather(city) {
     
 }
 
+searchBox.addEventListener('focus', () => {
+    document.querySelector(".span").classList.add("span-active")
+})
+
+searchBox.addEventListener('focusout', (target) => {
+    document.querySelector(".span").classList.remove("span-active")
+})
+
 searchBtn.addEventListener('click', () => {
     checkWeather(searchBox.value)
+    searchBox.value = ''
 })
