@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #373737;
+}
+
+body {
+    background: #222;
+}
+
+.card {
+    width: 100%;
+    max-width: 470px;
+    background: linear-gradient(110deg, #FFA500, #FFFF99, #87CEEB);
+    color: #fff;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 15px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+p {
+    font-weight: 600;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.frio {
+    background: linear-gradient(110deg, #048cb1, #ffffd0, #87CEEB);
+}
+
+.quente {
+    background: linear-gradient(110deg, #c37f00, #FFFF99, #bd3722);
+}
+
+.error {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+    display: none;
+}
+
+.invalida {
+    display: none;
+}
+
+@media screen and (max-width: 320px){
+    .card {
+        padding: 15px 20px;
+        margin: 0;
+    }
+    .search input{
+        width: 190px;
+    }
+
+    .weather-icon{
+        margin-top: 10px;
+    }
+
+    .details {
+        margin: 10px;
+    }
+}
